@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/page.css">
     <title>一汪無際No Way Home</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
             <a href="#">
                 <span>一汪無際:No Way Home</span> 
             </a>
-            <img src="https://picsum.photos/60/40?random=1" alt="">
+            <img src="img/logo.png" alt="">
         </h1>
         <label for="menu_control" class="menu_btn">
             <span>選單</span>
@@ -27,77 +28,79 @@
             <a href="profile.html">個人檔案</a>
         </nav>
         <button class="exit"   onclick="document.getElementById('id01').style.display='block'">登入</button>
-    </div>
-    
-    
-
-    <div id="id01" class="modal">
+        <div id="id01" class="modal">
   
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          </div>
-      
-        <div class="login-wrap" >
-                <div class="login-html">
-                    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登入</label>
-                    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">註冊</label>
-                    <div class="login-form">
-                        
-                        <div class="sign-in-htm">
-                            <div class="group">
-                                <label for="user" class="label">Email</label>
-                                <input id="user" type="email" class="input" name="user" required='required'>
-                            </div>
-                            <div class="group">
-                                <label for="pass" class="label">Password</label>
-                                <input id="pass" type="password" class="input" data-type="password" name="pwd" required='required'>
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+          
+            <div class="login-wrap" >
+                    <div class="login-html">
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登入</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">註冊</label>
+                        <div class="login-form">
+                            
+                            <div class="sign-in-htm">
+                                <div class="group">
+                                    <label for="user" class="label">Email</label>
+                                    <input id="user" type="email" class="input" name="user" required='required'>
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="pass" type="password" class="input" data-type="password" name="pwd" required='required'>
+                                </div>
+                                
+                                <div class="group">
+                                <a href="dog.html"> 
+                                    <input type="submit" class="button" value="登入">
+                                </a>
+                                </div>
                             </div>
                             
-                            <div class="group">
-                            <a href="dog.html"> 
-                                <input type="submit" class="button" value="登入">
-                            </a>
+                            <div class="sign-up-htm">
+                                <div class="group">
+                                    <label for="user" class="label">Username</label>
+                                    <input id="user" type="text" class="input" name="name" required='required'>
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="pass" type="password" class="input" data-type="password" name="pwd" required='required'>
+                                </div>
+                                
+                                <div class="group">
+                                    <label for="pass" class="label">Email Address</label>
+                                    <input id="email" type="email" class="input" name="email" required='required'>
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="註冊">
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="sign-up-htm">
-                            <div class="group">
-                                <label for="user" class="label">Username</label>
-                                <input id="user" type="text" class="input" name="name" required='required'>
-                            </div>
-                            <div class="group">
-                                <label for="pass" class="label">Password</label>
-                                <input id="pass" type="password" class="input" data-type="password" name="pwd" required='required'>
-                            </div>
-                            
-                            <div class="group">
-                                <label for="pass" class="label">Email Address</label>
-                                <input id="email" type="email" class="input" name="email" required='required'>
-                            </div>
-                            <div class="group">
-                                <input type="submit" class="button" value="註冊">
-                            </div>
-                        </div>
-                </div>
-        </div>
-
-      
+                    </div>
+            </div>
     
-        </form>
-      
-      <script>
-      // Get the modal
-      var modal = document.getElementById('id01');
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
-      </script>
+            </form>
+    
 
+    
+        </div>
     </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    
+    
+
 </body>
+
 </html>
