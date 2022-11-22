@@ -27,6 +27,7 @@
 }
 .logo span{
     color: #5B4522;
+    font-size: 16px;
     font-weight: bolder;
 }
 .logo a{
@@ -138,6 +139,9 @@ nav a{
     .logo{
         margin-left: 10px;
         margin-top: 0;
+    }
+    .logo span{
+        font-size: 24px;
     }
     .exit{
         width: 80px;
