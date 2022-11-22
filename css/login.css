@@ -7,7 +7,11 @@ body{
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}
 a{color:inherit;text-decoration:none}
-.tab{}
+.button{
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius:25px;
+}
 .login-wrap{
 	width:100%;
 	margin:auto;
@@ -72,7 +76,6 @@ a{color:inherit;text-decoration:none}
 .login-form .group .button{
 	width:100%;
 	color:#615959;
-	display:block;
 	outline: none;
 }
 .login-form .group .input,
@@ -104,39 +107,13 @@ a{color:inherit;text-decoration:none}
 .login-form .group .button:active{
 	transform: translateY(4px);
 }
-.login-form .group label .icon{
-	width:15px;
-	height:15px;
-	border-radius:2px;
-	position:relative;
-	display:inline-block;
-	
-}
-.login-form .group label .icon:before,
-.login-form .group label .icon:after{
-	content:'';
-	width:10px;
-	height:2px;
-	background:#fff;
-	position:absolute;
-	transition:all .2s ease-in-out 0s;
-}
-.login-form .group label .icon:before{
-	left:3px;
-	width:5px;
-	bottom:6px;
-	transform:scale(0) rotate(0);
-}
-.login-form .group label .icon:after{
-	top:6px;
-	right:0;
-	transform:scale(0) rotate(0);
-}
+
+
 .login-form .group .check:checked + label{
-	color:#fff;
+	color:rgb(100, 182, 133);
 }
 .login-form .group .check:checked + label .icon{
-	background:#1161ee;
+	background:#eda656;
 }
 .login-form .group .check:checked + label .icon:before{
 	transform:scale(1) rotate(45deg);
@@ -155,45 +132,11 @@ a{color:inherit;text-decoration:none}
 .input{
 	background-color: #A8BE96;
 }
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  
-  
-  margin: 8px 0;
-  
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
 
-.login{
-    width: 50px;
-    height: 30px;
-    top: 8px;
-    right: 20px;
-    color:#5B4522;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    border-style: none;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-}
-.login:hover{
-  background-color: #FFEBA5;
-  
-}
-.login:active{
-    transform: translateY(4px);
-}
-/* Set a style for all buttons */
-.modal button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+
+
+
 
 button:hover {
   opacity: 0.8;
@@ -213,10 +156,7 @@ button:hover {
   position: relative;
 }
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
+
 
 .container {
   padding: 16px;
