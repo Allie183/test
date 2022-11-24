@@ -189,9 +189,7 @@ span.psw {
 
 /* The Close Button (x) */
 .close {
-
   position: absolute;
-  
   color: #000;
   font-size: 35px;
   font-weight: bold;

@@ -82,8 +82,24 @@
 
 </header>
 <body>
-    <div class="findmsg">
-        <p>1234654</p>
+    <div class="reservemsg">
+        <form action="#">
+            <div class="date">
+                <label for="start">選擇日期:</label>
+                <input type="date" id="date" name="trip-start" value="today" max="2023-12-31" required='required'>
+                <label for="start">選擇時段:</label>
+                <select required='required'> 
+                    <option selected disabled>請選擇時段</option>
+                    <option selected>8:00-10:00</option>
+                    <option>10:00-12:00</option>
+                    <option>13:00-15:00</option>
+                    <option>15:00-17:00</option>
+                </select>
+            </div>
+            <input type="submit" class="book" value="預約">
+        </form>
+        
+        
     </div>
    
 
@@ -106,5 +122,24 @@
         }
     }
 </script>
+
+
+
+<script>
+    $(document).ready(function() {
+    var date = new Date();
+
+    var day = date.getDate();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+
+    if (month < 10) month = "0" + month;
+    if (day < 10) day = "0" + day;
+
+    var today = year + "-" + month + "-" + day;       
+    $("#theDate").attr("value", today);
+});
+</script>
+
 
 </html>
