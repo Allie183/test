@@ -82,6 +82,7 @@ header{
     0px -10px 0px #A8BE96;
 }
 nav{
+    z-index: 1;
     width: 40%;
     height: calc(100vh-50px);
     background-color: #A8BE96;
