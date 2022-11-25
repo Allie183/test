@@ -84,9 +84,21 @@
 <body>
     <div class="reservemsg">
         <form action="#">
-            <div class="date">
+            <div class="select">
+                <label for="start">選擇單位:</label>
+                <select required='required'> 
+                    <option selected disabled>請選擇單位</option>
+                    <option selected>桃園市動保教育園區</option>
+                    <option>新竹市動物保護教育園區</option>
+                    <option>板橋動物之家</option>
+                    <option>苗栗縣生態保育教育中心</option>
+                </select>
+            </div>
+            <div class="select">
                 <label for="start">選擇日期:</label>
-                <input type="date" id="date" name="trip-start" value="today" max="2023-12-31" required='required'>
+                <input type="date" id="date" name="trip-start" max="2023-12-31" required='required'>
+            </div>
+            <div class="select">
                 <label for="start">選擇時段:</label>
                 <select required='required'> 
                     <option selected disabled>請選擇時段</option>
@@ -96,7 +108,10 @@
                     <option>15:00-17:00</option>
                 </select>
             </div>
-            <input type="submit" class="book" value="預約">
+            <div class="select">
+                <input type="submit" class="book" value="預約">
+            </div>
+            
         </form>
         
         
