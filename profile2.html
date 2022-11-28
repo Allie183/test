@@ -83,7 +83,10 @@
 </header>
 <body>
     <div class="revise">
+        <div id="add" class="tabcontent">
         <input type ="button" class="back" onclick="history.back()" value="<"></input>
+        <input type ="button" class="revisebtn" value="完成"  onclick="openPage('add', this, '')" id="defaultOpen"></input>
+        <input type ="button" class="revisebtn2" value="編輯" onclick="openPage('add2', this, '')" ></input>
         <div class="revisemsg">
             <div class="revisewrap">
                 <div class="reviseleft">
@@ -96,6 +99,8 @@
                 </div>
             </div>
         </div>
+        
+        <form action="#">
         <div class="revise_detail">
             <div class="detail">
                 <div class="detailleft">
@@ -148,6 +153,79 @@
                 </div>
             </div>
         </div>
+        </form>
+        </div>
+
+        <div id="add2" class="tabcontent">
+            <input type ="button" class="back" onclick="history.back()" value="<"></input>
+            <div class="revisemsg">
+                <div class="revisewrap">
+                    <div class="reviseleft">
+                        <img src="img/dog.png" alt="">
+                    </div>
+                    <div class="reviseright">
+                        <p class="user">小明</p>
+                        <p class="number">會員編號：A00089</p>
+                        <p class="number">註冊日期：110.06.17</p>
+                    </div>
+                </div>
+            </div>
+            <form action="#">
+            <div class="revise_detail">
+                <div class="detail">
+                    <div class="detailleft">
+                        <label for="">帳號：</label>
+                    </div>
+                    <div class="detailright">
+                        <input type="email"  value="輸入內容" onfocus="javascript:if(this.value=='輸入內容')this.value='';" name="name" required='required'>
+                    </div>
+                </div>
+            </div>
+            <div class="revise_detail">
+                <div class="detail">
+                    <div class="detailleft">
+                        <label for="">密碼：</label>
+                    </div>
+                    <div class="detailright">
+                        <label for="">
+                            <a href="#">></a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="revise_detail">
+                <div class="detail">
+                    <div class="detailleft">
+                        <label for="">暱稱：</label>
+                    </div>
+                    <div class="detailright">
+                        <input type="text" value="輸入內容" onfocus="javascript:if(this.value=='輸入內容')this.value='';" name="name" required='required'>
+                    </div>
+                </div>
+            </div>
+            <div class="revise_detail">
+                <div class="detail">
+                    <div class="detailleft">
+                        <label for="">手機：</label>
+                    </div>
+                    <div class="detailright">
+                        <input type="text" value="輸入內容" onfocus="javascript:if(this.value=='輸入內容')this.value='';" name="name" required='required'>
+                    </div>
+                </div>
+            </div>
+            <div class="revise_detail">
+                <div class="detail">
+                    <div class="detailleft">
+                        <label for="">生日：</label>
+                    </div>
+                    <div class="detailright">
+                        <input type="text" value="輸入內容" onfocus="javascript:if(this.value=='輸入內容')this.value='';" name="name" required='required'>
+                    </div>
+                </div>
+            </div>
+            <input type ="button" class="revisebtn3" value="完成"  onclick="openPage('add', this, '')" id="defaultOpen"></input>
+            </form>
+            </div>
 
     </div>
 
@@ -170,5 +248,30 @@
         }
     }
 </script>
+<script>
+    function openPage(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+    
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+        }
+    
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+    
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
 
 </html>
