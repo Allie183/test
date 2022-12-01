@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/page.css">
-    <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="css/pair.css">
+    <script src="pair.js"> </script>
     <title>一汪無際No Way Home</title>
 </head>
 <header>
@@ -83,27 +84,9 @@
 
 </header>
 <body>
-    
-    <!--選擇檔案-->
-    <div class="up">
-        <form action="/somewhere/to/upload" enctype="multipart/form-data" accept="image/gif, image/jpeg, image/png, image/jpg, image/svg, image/heic">  
-            <p class="title">請上傳您所拍攝的相片：</p>
-        <input type="file"  class="choose" onchange="readURL(this)" targetID="preview_progressbarTW_img" required />
-
-        <img id="preview_progressbarTW_img"  class="prepic" />
-     
-     </form>
-
-     <center>
-        <a href="report2.html">
-            <button class="next">下一步</button></a>
-    </center>
-    </div>
 
     
-
-    
-
+ 
 </body>
 
 <footer>
@@ -113,9 +96,20 @@
 </footer>
 
 <script>
-
-    l = document.getElementById('id01');
+    // Get the modal
+    var modal = document.getElementById('id01');
     
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+     // Get the modal
+     var modal = document.getElementById('id02');
+    
+    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -123,33 +117,6 @@
     }
 </script>
 
-<!--選擇檔案-->
-<script>
-
-function readURL(input){
-
-  if(input.files && input.files[0]){
-
-    var imageTagID = input.getAttribute("targetID");
-
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-
-       var img = document.getElementById(imageTagID);
-
-       img.setAttribute("src", e.target.result)
-
-    }
-
-    reader.readAsDataURL(input.files[0]);
-
-  }
-
-}
-
-</script>
-    
 
 
 </html>

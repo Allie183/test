@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/find.css">
     <title>一汪無際No Way Home</title>
 </head>
 <header>
@@ -82,11 +83,204 @@
 
 </header>
 <body>
-    <div class="findmsg">
-        <p>1234654</p>
-    </div>
-   
+    <section class="condition">
 
+        <div class="condtion-card">
+            <p>找汪汪:</p>
+            <div id="radio">
+                <label><input type="radio" name="ownerchoose_condtion" value="幼犬" checked="checked">
+                    <span class="round button">幼犬</span></label>
+                <label><input type="radio" name="ownerchoose_condtion" value="成犬" checked="checked">
+                    <span class="round button">成犬</span></label>
+                <label><input type="radio" name="ownerchoose_condtion" value="長毛" checked="checked">
+                    <span class="round button">長毛</span></label>
+                <label><input type="radio" name="ownerchoose_condtion" value="短毛" checked="checked">
+                    <span class="round button">短毛</span></label>
+            </div>
+        </div>
+        <style>
+            #radio input[type="radio"] {display: none; }
+            #radio input:checked + .button {background: #5e7380; color: #fff; cursor: default;}
+            #radio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #333; cursor: pointer; }
+            #radio .button:hover {background: #bbb; color: #fff; }
+            #radio .round {border-radius: 5px; }
+        </style>
+
+        <div class="condtion-card">
+            <p>汪汪個性:</p>
+            <div id="radio">
+                <label><input type="radio" name="personalitychoose_condtion" value="害羞" checked="checked">
+                    <span class="round button">害羞</span></label>
+                <label><input type="radio" name="personalitychoose_condtion" value="活潑" checked="checked">
+                    <span class="round button">活潑</span></label>
+                <label><input type="radio" name="personalitychoose_condtion" value="親人" checked="checked">
+                    <span class="round button">親人</span></label>
+                <label><input type="radio" name="personalitychoose_condtion" value="怕生" checked="checked">
+                    <span class="round button">怕生</span></label>
+            </div>
+        </div>
+        <style>
+            #radio input[type="radio"] {display: none; }
+            #radio input:checked + .button {background: #5e7380; color: #fff; cursor: default;}
+            #radio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #333; cursor: pointer; }
+            #radio .button:hover {background: #bbb; color: #fff; }
+            #radio .round {border-radius: 5px; }
+        </style>  
+
+ 
+        <div class="condtion-card">
+        <p>家中格局:</p>
+        <div id="radio">
+            <label><input type="radio" name="straydogchoosehouse_condtion" value="透天" checked="checked">
+                <span class="round button">透天</span></label>
+            <label><input type="radio" name="straydogchoosehouse_condtion" value="公寓" checked="checked">
+                <span class="round button">公寓</span></label>
+            <label><input type="radio" name="straydogchoosehouse_condtion" value="大樓" checked="checked">
+                <span class="round button">大樓</span></label>
+            <label><input type="radio" name="straydogchoosehouse_condtion" value="別墅" checked="checked">
+                <span class="round button">別墅</span></label>
+          </div>
+        </div>
+        <style>
+            #radio input[type="radio"] {display: none; }
+            #radio input:checked + .button {background: #5e7380; color: #fff; cursor: default; }
+            #radio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #333; cursor: pointer; }
+            #radio .button:hover {background: #bbb; color: #fff; }
+            #radio .round {border-radius: 5px; }
+            </style>
+
+        <div class="condtion-card">
+        <p>家中成員:</p>
+        <div id="radio">
+            <label><input type="radio" name="straydogchoosefamilymember_condtion" value="頂客" checked="checked">
+                <span class="round button">頂客</span>
+            </label>
+            <label><input type="radio" name="straydogchoosefamilymember_condtion" value="有小孩" checked="checked">
+                <span class="round button">有小孩</span>
+            </label>
+            <label><input type="radio" name="straydogchoosefamilymember_condtion" value="單身" checked="checked">
+                <span class="round button">單身</span>
+            </label>
+            <label><input type="radio" name="straydogchoosefamilymember_condtion" value="有其他寵物" checked="checked">
+                <span class="round button">已有寵物</span>
+            </label>
+        </div>
+        </div>
+        <style>
+            #radio input[type="radio"] {display: none; }
+            #radio input:checked + .button {background: #ad987d; color: #fff; cursor: default; }
+            #radio .button {display: inline-block; margin: 0 5px 10px 0; padding: 5px 10px; background: #f7f7f7; color: #333; cursor: pointer; }
+            #radio .button:hover {background: #bbb; color: #fff; }
+            #radio .round {border-radius: 5px; }
+            </style>
+        
+          <br>
+        
+          
+        <button class="pair-button" ><a href="pair.html">
+            <p class="buttontext-pair">配對!</p></a></button>
+    </section>
+    <br>
+    <section>
+    <p class="text_needhome">還有這些浪浪需要一個家!</p>
+</section>
+
+    <br>
+  <section class="wrap">
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+
+    </figure>
+    <footer class="straydog-card_footer">
+        <div class="straydog-card_text">
+           XXXXXXX
+        </div>
+        <button class="straydog-card_choose">
+            選擇!
+        </button>
+    </footer>
+</div>
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+
+    </figure>
+    <footer class="straydog-card_footer">
+        <div class="straydog-card_text">
+           XXXXXXX
+        </div>
+        <button class="straydog-card_choose">
+            選擇!
+        </button>
+    </footer>
+</div>
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+
+    </figure>
+    <footer class="straydog-card_footer">
+        <div class="straydog-card_text">
+           XXXXXXX
+        </div>
+        <button class="straydog-card_choose">
+            選擇!
+        </button>
+    </footer>
+</div>
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+
+    </figure>
+    <footer class="straydog-card_footer">
+        <div class="straydog-card_text">
+           XXXXXXX
+        </div>
+        <button class="straydog-card_choose">
+            選擇!
+        </button>
+    </footer>
+</div>
+</section>
+  </section> 
 </body>
 
 <footer>
@@ -106,5 +300,7 @@
         }
     }
 </script>
+
+
 
 </html>

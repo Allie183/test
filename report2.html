@@ -84,24 +84,49 @@
 </header>
 <body>
     
-    <!--選擇檔案-->
-    <div class="up">
-        <form action="/somewhere/to/upload" enctype="multipart/form-data" accept="image/gif, image/jpeg, image/png, image/jpg, image/svg, image/heic">  
-            <p class="title">請上傳您所拍攝的相片：</p>
-        <input type="file"  class="choose" onchange="readURL(this)" targetID="preview_progressbarTW_img" required />
+    <div class="up2">
+        <form class="repo2">
+            <label>通報類別：</label>
+            <label><input type="radio" name="report" value="general" required>一般通報</label>
+            <label><input type="radio" name="report" value="urgent">緊急通報</label>
 
-        <img id="preview_progressbarTW_img"  class="prepic" />
-     
-     </form>
 
-     <center>
-        <a href="report2.html">
-            <button class="next">下一步</button></a>
-    </center>
-    </div>
+        <p class="ww">犬種：
+        <select class="variety" required>
+            <option></option>
+            <option>米克斯</option>
+            <option>馬爾濟斯</option>
+            <option>貴賓</option>
+            <option>雪納瑞</option>
+            <option>柴犬</option>
+            <option>柯基</option>
+            <option>吉娃娃</option>
+            <option>臘腸</option>
+            <option>博美</option>
+            <option>哈士奇</option>
+            <option>拉布拉多</option>
+            <option>蝴蝶犬</option>
+            <option>巴哥</option>
+            <option>西施犬</option>
+            <option>鬆獅犬</option>
+            <option>黃金獵犬</option>
+            <option>薩摩耶</option>
+            <option>阿拉斯加犬</option>
+            <option>約克夏</option>
+            <option>牛頭㹴</option>
+            <option>其他</option>
+            <option>不明</option>
+        </select></p>
 
-    
+            <p class="ww">情況：
+            <input type="text" name="state" class="state" placeholder="請輸入精神、明顯外傷位置或其他特殊狀況..." required ></p>
 
+            <p class="ww">
+            <button class="loca_btn" onclick="getLocation()">出沒位置</button>
+            <p id="demo" class="loca_text"></p></p>
+
+            <center><input type="submit" class="enter_repo2"></center>
+        </form></div>
     
 
 </body>
@@ -123,32 +148,25 @@
     }
 </script>
 
-<!--選擇檔案-->
+<!--位置-->
 <script>
-
-function readURL(input){
-
-  if(input.files && input.files[0]){
-
-    var imageTagID = input.getAttribute("targetID");
-
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-
-       var img = document.getElementById(imageTagID);
-
-       img.setAttribute("src", e.target.result)
-
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
     }
+    
+    function showPosition(position) {
+      x.innerHTML = "經度: " + position.coords.latitude + "°"+"<br>緯度: " + position.coords.longitude+"°";
+    }
+    </script>
+    
 
-    reader.readAsDataURL(input.files[0]);
 
-  }
-
-}
-
-</script>
     
 
 

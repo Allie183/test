@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/pair.css">
+    <script src="pair.js"> </script>
+    <title>一汪無際No Way Home</title>
+</head>
+<header>
+    <input type="checkbox" name="" id="menu_control">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="index.html">
+                <span>一汪無際:No Way Home</span> 
+            </a>
+            <img src="img/logo.png" alt="">
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="find.html">尋找浪浪</a>
+            <a href="reserve.html">預約志工</a>
+            <a href="report.html">通報上傳</a>
+            <a href="profile.html">個人檔案</a>
+        </nav>
+        <button class="exit"   onclick="document.getElementById('id01').style.display='block'">登入</button>
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+            <div class="login-wrap" >
+                    <div class="login-html">
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登入</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">註冊</label>
+                        <div class="login-form">
+                            
+                            <div class="sign-in-htm">
+                                <div class="group">
+                                    <label for="user" class="label">Email</label>
+                                    <input id="user" type="email" class="input" name="user" required='required'>
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="pass" type="password" class="input" data-type="password" name="pwd" required='required'>
+                                </div>
+                                
+                                <div class="group">
+                                <a href="dog.html"> 
+                                    <input type="submit" class="button" value="登入">
+                                </a>
+                                </div>
+                            </div>
+                            
+                            <div class="sign-up-htm">
+                                <div class="group">
+                                    <label for="user" class="label">Username</label>
+                                    <input id="user" type="text" class="input" name="name" required='required'>
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="pass" type="password" class="input" data-type="password" name="pwd" required='required'>
+                                </div>
+                                
+                                <div class="group">
+                                    <label for="pass" class="label">Email Address</label>
+                                    <input id="email" type="email" class="input" name="email" required='required'>
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="註冊">
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+</header>
+<body>
+    
+  <section class="wrap">
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+    </figure>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+      </div>
+    <footer class="straydog-card_footer">
+        <button type="button"  name="submit_Btn"  id="submit_Btn3" onClick="document.form1.submit()"><img  src="img/icon3.png"></button>
+        <button type="button"   id="submit_Btn1" onclick="document.getElementById('id02').style.display='block'"><img  src="img/icon1.png"></button>
+        <div id="id02" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+              </div>
+            <div class="moredescription-wrap" >
+                    <div class="moredescription-html">
+                        <figure class="moredescription_image">
+                            <img src="img/straydog1.jpg">
+                        </figure>
+                        <div class="mdname">
+                            小白
+                        </div>
+                        <div class="md_location">
+                            <input type="image" id="location_icon" src="img/地標.png" width="40px">
+                            <div class=relativelocation>
+                            
+                            Taiwan/Taoyuan
+                        </div>
+                        
+                        </div>
+                        <div class="moredescrition">
+                            於桃園市中壢區xx路拾獲，個性溫馴，喜歡玩球。
+                        </div>
+
+                        <div class="dogg">
+                        <div class="dogyear" style="display:inline;">年齡</div>
+                        <div class="dogsex" style="display:inline;">性別</div>
+                        <div class="dogweight" style="display:inline;">體重</div>
+                       </div>
+
+                       <div class="dogg2">
+                        <div class="dogyear2" style="display:inline;">1Year</div>
+                        <div class="dogsex2" style="display:inline;">Male</div>
+                        <div class="dogweight2" style="display:inline;">3Kg</div>
+                       </div>
+
+                       <div class="takemehome">
+                           <button class="takemehomebutn" style="display:inline;">
+                               帶我回家
+                           </button>
+                           <button class="heartbutn" style="display:inline;"><a href="fav_list.html">
+                            ❤
+                        </a>
+                        </button>
+
+                       </div>
+                       
+
+
+                        <div class="moredescription-form">
+                            
+                            
+                            
+                            
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+        <button type="button"  name="submit_Btn"  id="submit_Btn2"><a href="fav_list.html"><img  src="img/icon2.png"></a></button>
+    </footer>
+</div>
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+    </figure>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+      </div>
+    <footer class="straydog-card_footer">
+        <input type="image" src="img/icon3.png" onClick="document.formname.delete();">
+        <input type="image" src="img/icon1.png" onClick="document.formname.submit();">
+        <input type="image" src="img/icon2.png" onClick="document.formname.submit();">
+    </footer>
+</div>
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+    </figure>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+      </div>
+    <footer class="straydog-card_footer">
+        <input type="image" src="img/icon3.png" onClick="document.formname.delete();">
+        <input type="image" src="img/icon1.png" onClick="document.formname.submit();">
+        <input type="image" src="img/icon2.png" onClick="document.formname.submit();">
+    </footer>
+</div>
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+    </figure>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+      </div>
+    <footer class="straydog-card_footer">
+        <input type="image" src="img/icon3.png" onClick="document.formname.delete();">
+        <input type="image" src="img/icon1.png" onClick="document.formname.submit();">
+        <input type="image" src="img/icon2.png" onClick="document.formname.submit();">
+    </footer>
+</div>
+<div class="straydog-card">
+    <div class="straydog-card_status">
+    桃園流浪動物之家
+    </div>
+    <div class="straydog-card_name">
+        汪汪姓名
+    </div>
+    <div class="straydog-card_description">
+        浪浪介紹
+    </div>
+    <figure class="straydog-card_image">
+        <img src="img/straydog1.jpg">
+    </figure>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+    <div class="hashtag">標籤</div>
+
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+      </div>
+    <footer class="straydog-card_footer">
+        <input type="image" src="img/icon3.png" onClick="document.formname.delete();">
+        <input type="image" src="img/icon1.png" onClick="document.formname.submit();">
+        <input type="image" src="img/icon2.png" onClick="document.formname.submit();">
+    </footer>
+</div>
+
+</section>
+ 
+</body>
+
+<footer>
+    <div class="footer">
+        &copy; copyright 2022 by No Way Home
+    </div>
+</footer>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+     // Get the modal
+     var modal = document.getElementById('id02');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+
+</html>
+
