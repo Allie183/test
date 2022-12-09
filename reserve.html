@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/reserve.css">
+    
     <title>一汪無際No Way Home</title>
 </head>
 <header>
@@ -82,41 +84,112 @@
 
 </header>
 <body>
-    <div class="reservemsg">
-        <form action="#">
-            <div class="select">
-                <label for="start">選擇單位:</label>
-                <select required='required'> 
-                    <option selected disabled>請選擇單位</option>
-                    <option selected>桃園市動保教育園區</option>
-                    <option>新竹市動物保護教育園區</option>
-                    <option>板橋動物之家</option>
-                    <option>苗栗縣生態保育教育中心</option>
-                </select>
+  
+    <div class="shape">
+        <div class="wrapper">
+            <div class="select-btn">
+              <span>請選擇單位</span>
+              <i class="awd">
+                <img src="img/arrowdown.png" alt="">
+              </i>
             </div>
-            <div class="select">
-                <label for="start">選擇日期:</label>
-                <input type="date" id="date" name="trip-start" max="2023-12-31" required='required'>
+            <div class="content">
+              <div class="search">
+                <i class="uil uil-search"></i>
+                <input spellcheck="false" type="text" placeholder="Search">
+              </div>
+              <ul class="options"></ul>
             </div>
-            <div class="select">
-                <label for="start">選擇時段:</label>
-                <select required='required'> 
-                    <option selected disabled>請選擇時段</option>
-                    <option selected>8:00-10:00</option>
-                    <option>10:00-12:00</option>
-                    <option>13:00-15:00</option>
-                    <option>15:00-17:00</option>
-                </select>
+          </div>
+          <script src="select.js"></script>
+    
+          <div class="wrapper">
+            <div class="select-btn">
+              <span>請選擇日期</span>
+              <i class="awd"><img src="img/arrowdown.png" alt=""></i>
             </div>
-            <div class="select">
-                <input type="submit" class="book" value="我要預約">
+            <div class="content">
+              <div class="search">
+                <i class="uil uil-search"></i>
+                <input spellcheck="false" type="text" placeholder="Search">
+              </div>
+              <ul class="options"></ul>
             </div>
+        </div>
+    
+          <div class="wrapper">
+            <div class="select-btn">
+              <span>請選擇時段</span>
+              <i class="awd"><img src="img/arrowdown.png" alt=""></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                <i class="uil uil-search"></i>
+                <input spellcheck="false" type="text" placeholder="Search">
+              </div>
+              <ul class="options"></ul>
+            </div>
+            <div class="checkbtn"><span >確認預約</span></div>
             
-        </form>
+        </div>
         
         
     </div>
-   
+    
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="img/volunteer1.jpg" alt="" style="width: 60%">
+            <h3>桃園市動保教育園區</h3>
+            <p>週末送養志工</p>
+            <p>協助維持環境清潔  |  協助犬隻運送</p>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+                <img src="img/volunteer2.jpg" alt="" style="width:60%">
+            <h3>新竹市動物保護教育園區</h3>
+            <p>狗園打掃志工</p>
+            <p>協助清掃狗區  |  物資整理收納</p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+                <img src="img/volunteer3.jpg" alt="" style="width: 75%">
+            <h3>板橋動物之家</h3>
+            <p>一日志工</p>
+            <p>牽狗散步  ｜  互動觀察記錄 ｜  餵食紀錄  </p>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                  <img src="img/volunteer4.jpg" alt="" style="width:95%">
+              <h3>台南市流浪動物愛護協會</h3>
+              <p>住院室志工 |  浪犬恢復室打掃 </p>
+              <p>牽狗散步  ｜  互動觀察記錄 ｜  餵食紀錄 </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+                  <img src="img/volunteer5.jpg" alt="" style="width:60%">
+              <h3>苗栗縣生態保育教育中心</h3>
+              <p>志願服務</p>
+              <p>參訪活動導覽 ｜ 拍攝網路媒體行銷</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+                  <img src="img/volunteer6.jpg" alt="" style="width: 80%">
+              <h3>高雄市流浪動物保育協會</h3>
+              <p>寒暑假志工服務</p>
+              <p>協助行政作業  ｜  整理捐贈物資</p>
+            </div>
+          </div>
+        
+      </div>
+      
 
 </body>
 

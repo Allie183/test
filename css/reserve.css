@@ -1,0 +1,206 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background:rgba(168, 190, 150, 0.25);;
+}
+::selection{
+  color: #fff;
+  background: #4285f4;
+}
+
+.wrapper{
+  width:90%;
+  margin-left: 5%;
+  padding-top: 30px;
+  
+}
+li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-btn{
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  padding-left:  80px;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 50px;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+.select-btn:hover,.checkbtn:hover{
+    background-color: #91A695;
+    
+    }
+.select-btn:active,.checkbtn:active{
+    transform: translateY(4px);
+    }
+
+.select-btn i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+.awd img{
+  width: 5%;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+.wrapper.active .select-btn i{
+  transform: rotate(-180deg);
+}
+.content{
+  display: none;
+  padding: 20px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.wrapper.active .content{
+  display: block;
+}
+.content .search{
+  position: relative;
+}
+.search i{
+  top: 50%;
+  left: 15px;
+  color: #999;
+  font-size: 20px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.search input{
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 0 20px 0 43px;
+  border: 1px solid #B3B3B3;
+}
+.search input:focus{
+  padding-left: 42px;
+  border: 2px solid #4285f4;
+}
+.search input::placeholder{
+  color: #bfbfbf;
+}
+.content .options{
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+.options::-webkit-scrollbar{
+  width: 7px;
+}
+.options::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb:hover{
+  background: #b3b3b3;
+}
+.options li{
+  height: 50px;
+  padding: 0 13px;
+  font-size: 21px;
+}
+.options li:hover, li.selected{
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+.checkbtn{
+  width: 50%;
+  padding: 10px 15px;
+  text-align: center;
+  align-items: center;
+  margin-left: 25%;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 15%;
+  margin-bottom: 3%;
+ }
+ 
+ .shape{
+  margin: 5%;
+  padding: 3%;
+  padding-bottom: 5%;
+  width: 90%;
+  background: #b5bcab;
+  border-radius: 50px;
+  position: relative;
+ }
+ 
+ /* Float four columns side by side */
+.column {
+  float: left;
+  width: 30%;
+  padding-top: 2%;
+  padding-left: 3%;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 40px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 768px) {
+  .column {
+    width: 100%;
+    display: block;
+   
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #d3d4ce;
+  transition: transform .2s;
+  border-radius: 20px;
+  margin-bottom: 4%;
+  
+}
+.card:hover {
+  transform: scale(1.2,1.2);}
+
+  h3{
+    color:#273d28;
+  }
+  p{
+    color: #849974;
+    font-size: 15px;
+  }
+  @media screen and (min-width: 768px){
+    .shape{
+      width: 30%;
+      margin: 3%;
+    }
+  }
