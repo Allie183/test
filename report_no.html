@@ -84,57 +84,26 @@
 </header>
 <body>
     
-    <div class="up2">
-        <form class="repo2">
+    <!--選擇檔案-->
+    <div class="up">
+        <form action="/somewhere/to/upload" enctype="multipart/form-data" accept="image/gif, image/jpeg, image/png, image/jpg, image/svg, image/heic">  
+            <p class="title">請上傳相片：</p>
+        <input type="file"  class="choose" onchange="readURL(this)" targetID="preview_progressbarTW_img" required />
 
-            <div class="ti">
-            <label>通報類別：</label>
-            <label><input type="radio" name="report" value="general" required>一般通報</label>
-            <label><input type="radio" name="report" value="urgent">緊急通報</label></div>
+        <img id="preview_progressbarTW_img"  class="prepic" />
+     
+     </form>
 
+     <center>
 
-        <p class="ww">犬種：
-        <select class="variety" required>
-            <option>貴賓</option>
-            <option>米克斯</option>
-            <option>馬爾濟斯</option>
-            <option>雪納瑞</option>
-            <option>柴犬</option>
-            <option>柯基</option>
-            <option>吉娃娃</option>
-            <option>臘腸</option>
-            <option>博美</option>
-            <option>哈士奇</option>
-            <option>拉布拉多</option>
-            <option>蝴蝶犬</option>
-            <option>巴哥</option>
-            <option>西施犬</option>
-            <option>鬆獅犬</option>
-            <option>黃金獵犬</option>
-            <option>薩摩耶</option>
-            <option>阿拉斯加犬</option>
-            <option>約克夏</option>
-            <option>牛頭㹴</option>
-            <option>其他</option>
-            <option>不明</option>
-        </select></p>
+            <input type="button" class="next" onclick="showalert()" value="下一步" />
 
-            <p class="ww">情況：
-            <input type="text" name="state" class="state" placeholder="精神、明顯外傷位置或其他特殊狀況..." required ></p>
+    </center>
+    </div>
 
-            <p class="ww">
-            <button class="loca_btn" onclick="getLocation()">出沒位置</button>
-            <p id="demo" class="loca_text"></p></p>
+    
 
-
-            <center>
-                <input type="button" class="next" onclick="showalert()" value="提交" />
-                <div id="current_date" class="tii"></div>
-
-            </center>
-        </form></div>
-
-
+    
 
 </body>
 
@@ -155,43 +124,38 @@
     }
 </script>
 
-<!--位置-->
+<!--選擇檔案-->
 <script>
-    var x = document.getElementById("demo");
-    
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
+
+function readURL(input){
+
+  if(input.files && input.files[0]){
+
+    var imageTagID = input.getAttribute("targetID");
+
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+
+       var img = document.getElementById(imageTagID);
+
+       img.setAttribute("src", e.target.result)
+
     }
-    
-    function showPosition(position) {
-      x.innerHTML = "經度: " + position.coords.latitude + "°"+"<br>緯度: " + position.coords.longitude+"°";
-    }
-    </script>
 
-<!--時間-->
-<script>
-    date = new Date();
-    year = date.getFullYear();
-    month = date.getMonth() + 1;
-    day = date.getDate();
-    hours = date.getHours();
-    minutes = date.getMinutes();
+    reader.readAsDataURL(input.files[0]);
 
-    document.getElementById("current_date").innerHTML = "通報時間：" + year + "/" + month + "/" + day + "    " + hours + ":" + minutes;
-</script>
-
-
-
-
-<script>
-function showalert(){
-    alert("已收到您的通報資料。");
   }
-  
-</script>
-</html>
 
+}
+
+function showalert(){
+    alert("偵測不到狗狗，請重新拍攝!!");
+  }
+
+</script>
+
+    
+
+
+</html>

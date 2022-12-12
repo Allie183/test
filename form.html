@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    
     <title>一汪無際No Way Home</title>
 </head>
 <header>
@@ -82,59 +85,79 @@
     </div>
 
 </header>
+<style>
+input[type="submit"]{padding:5px 15px; background:#455438; color:rgb(255, 255, 255);border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 20px;
+margin-top: 10px;
+margin-left: 60px; }
+    input[type="text"]{padding:5px 15px; background:#e1e4de; border:3px #455438 solid;
+cursor:pointer;
+-webkit-border-radius: 5px;
+border-radius: 20px; }
+</style>
 <body>
     
     <div class="up2">
         <form class="repo2">
+            <form action="/formprocess.php" method="post">
 
-            <div class="ti">
-            <label>通報類別：</label>
-            <label><input type="radio" name="report" value="general" required>一般通報</label>
-            <label><input type="radio" name="report" value="urgent">緊急通報</label></div>
+                <p class=>Name:</p>
+                <p><input type="text" name="name" value="" id="yourname" required></p>
+                <div>
+                    <label>性別：</label><br>
+                    <input type="radio" name="gender" id="male" value="boy" required>
+                    <label for="male">男生</label>
+                    <input type="radio" name="gender" id="female" value="girl" required>
+                    <label for="female">女生</label>
+                </div>
+                <label for="start"  required>年齡:</label>
 
+                <div><input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="1900-01-01" max="2018-12-31"> </div>
+                
+       
+                <p>Email:</p>
+                <p><input name="species" type="text"  required></p>
+            
+                <p>未來您與狗狗居住的地址</p>
+                <p><input name="text" type="text" required></p>
 
-        <p class="ww">犬種：
-        <select class="variety" required>
-            <option>貴賓</option>
-            <option>米克斯</option>
-            <option>馬爾濟斯</option>
-            <option>雪納瑞</option>
-            <option>柴犬</option>
-            <option>柯基</option>
-            <option>吉娃娃</option>
-            <option>臘腸</option>
-            <option>博美</option>
-            <option>哈士奇</option>
-            <option>拉布拉多</option>
-            <option>蝴蝶犬</option>
-            <option>巴哥</option>
-            <option>西施犬</option>
-            <option>鬆獅犬</option>
-            <option>黃金獵犬</option>
-            <option>薩摩耶</option>
-            <option>阿拉斯加犬</option>
-            <option>約克夏</option>
-            <option>牛頭㹴</option>
-            <option>其他</option>
-            <option>不明</option>
-        </select></p>
-
-            <p class="ww">情況：
-            <input type="text" name="state" class="state" placeholder="精神、明顯外傷位置或其他特殊狀況..." required ></p>
-
-            <p class="ww">
-            <button class="loca_btn" onclick="getLocation()">出沒位置</button>
-            <p id="demo" class="loca_text"></p></p>
-
-
-            <center>
-                <input type="button" class="next" onclick="showalert()" value="提交" />
-                <div id="current_date" class="tii"></div>
-
-            </center>
-        </form></div>
-
-
+                <p>連絡電話:</p>
+                <p><input name="species" type="text" required></p>
+                <p>
+                    
+                    <p>認養資格：</p>
+                     <div> <input type="radio" name="ecom" id="male" value="boy" required>
+                        <label for="male">有照顧狗狗的經濟能力</label></div>
+                    <div><input type="radio" name="sb" id="male" value="boy" required>
+                        <label for="male">領養者必須同意永遠善待狗狗，並確保狗狗的健康與安全</label></div>
+                    
+                
+                    
+                    </p>
+                   <!--領養申請流程
+                    以下是領養狗狗的步驟：
+                    1. 查看等待領養的狗狗
+                    
+                    2. 填寫領養諮詢表
+                    
+                    3. 參加領養工作坊（團隊成員會連絡您）
+                    
+                    4. 安置專員將安排您與狗狗見面、進行面談和參觀您的家（面對面或線上）
+                    
+                    5. 如果適合，我們會安排一個星期的試養
+                    
+                    6. 如果試養順利，我們會請您簽署領養合約，然後再將狗狗的晶片轉移到您的名下-->
+            
+                <p><input type="submit" value="資料無誤 下一頁!" onclick="location.href='notice.html'"></p>
+                
+            </form>
+            </form>
+            </div>
+           
 
 </body>
 
@@ -172,26 +195,11 @@
     }
     </script>
 
-<!--時間-->
-<script>
-    date = new Date();
-    year = date.getFullYear();
-    month = date.getMonth() + 1;
-    day = date.getDate();
-    hours = date.getHours();
-    minutes = date.getMinutes();
 
-    document.getElementById("current_date").innerHTML = "通報時間：" + year + "/" + month + "/" + day + "    " + hours + ":" + minutes;
-</script>
+    
 
 
+    
 
 
-<script>
-function showalert(){
-    alert("已收到您的通報資料。");
-  }
-  
-</script>
 </html>
-

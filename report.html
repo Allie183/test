@@ -87,7 +87,7 @@
     <!--選擇檔案-->
     <div class="up">
         <form action="/somewhere/to/upload" enctype="multipart/form-data" accept="image/gif, image/jpeg, image/png, image/jpg, image/svg, image/heic">  
-            <p class="title">請上傳您所拍攝的相片：</p>
+            <p class="title">請上傳相片：</p>
         <input type="file"  class="choose" onchange="readURL(this)" targetID="preview_progressbarTW_img" required />
 
         <img id="preview_progressbarTW_img"  class="prepic" />
@@ -96,7 +96,7 @@
 
      <center>
         <a href="report2.html">
-            <button class="next">下一步</button></a>
+            <input type="button" class="next" onclick="showalert()" value="下一步" />
     </center>
     </div>
 
@@ -148,7 +148,12 @@ function readURL(input){
 
 }
 
+function showalert(){
+    alert("偵測到犬種為「貴賓」。");
+  }
+  
 </script>
+
     
 
 

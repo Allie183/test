@@ -86,109 +86,165 @@
 <body>
   
     <div class="shape">
-        <div class="wrapper">
-            <div class="select-btn">
-              <span>請選擇單位</span>
-              <i class="awd">
-                <img src="img/arrowdown.png" alt="">
-              </i>
-            </div>
-            <div class="content">
-              <div class="search">
-                <i class="uil uil-search"></i>
-                <input spellcheck="false" type="text" placeholder="Search">
-              </div>
-              <ul class="options"></ul>
-            </div>
-          </div>
-          <script src="select.js"></script>
-    
-          <div class="wrapper">
-            <div class="select-btn">
-              <span>請選擇日期</span>
-              <i class="awd"><img src="img/arrowdown.png" alt=""></i>
-            </div>
-            <div class="content">
-              <div class="search">
-                <i class="uil uil-search"></i>
-                <input spellcheck="false" type="text" placeholder="Search">
-              </div>
-              <ul class="options"></ul>
-            </div>
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">請選擇單位</span>
+          <div class="caret"></div>
         </div>
-    
-          <div class="wrapper">
-            <div class="select-btn">
-              <span>請選擇時段</span>
-              <i class="awd"><img src="img/arrowdown.png" alt=""></i>
+        <ul class="menu">
+          <li>桃園市動保教育園區</li>
+          <li>新竹市動物保護教育園區</li>
+          <li>板橋動物之家</li>
+          <li>台南市流浪動物愛護協會</li>
+          <li>苗栗縣生態保育教育中心</li>
+          <li>高雄市流浪動物保育協會</li>
+        </ul>
+      </div>
+  
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">請選擇日期</span>
+          <div class="caret"></div>
+        </div>
+        <ul class="menu">
+          <li>2022.10.01</li>
+          <li>2022.10.02</li>
+          <li>2022.10.03</li>
+          <li>2022.10.04</li>
+          <li>2022.10.05</li>
+          <li>2022.10.06</li>
+        </ul>
+      </div>
+     
+      <div class="dropdown">
+        <div class="select">
+          <span class="selected">請選擇時段</span>
+          <div class="caret"></div>
+        </div>
+        <ul class="menu">
+          <li>8:00-10:00</li>
+          <li>10:00-12:00</li>
+          <li>13:00-15:00</li>
+          <li>15:00-17:00</li>
+        </ul>
+      </div>
+
+         
+      <script src="time.js"></script>
+
+            <button type="submit" class="checkbtn" onclick="openPopup()">確認預約</button>
+            <div class="popup" id="popup">
+              <img src="img/tick.png">
+              <h2>Thank You!</h2>
+              <P>您已成功預約！</P>
+              <button type="button" onclick="closePopup()">OK</button>
             </div>
-            <div class="content">
-              <div class="search">
-                <i class="uil uil-search"></i>
-                <input spellcheck="false" type="text" placeholder="Search">
-              </div>
-              <ul class="options"></ul>
-            </div>
-            <div class="checkbtn"><span >確認預約</span></div>
             
         </div>
         
         
     </div>
+
     
+   
     <div class="row">
         <div class="column">
-          <div class="card">
-            <img src="img/volunteer1.jpg" alt="" style="width: 60%">
-            <h3>桃園市動保教育園區</h3>
-            <p>週末送養志工</p>
-            <p>協助維持環境清潔  |  協助犬隻運送</p>
+          <div class="flip-card">
+            <div class="flip-card-inner">  
+              <div class="flip-card-front">
+                <img src="img/volunteer1.jpg" alt="" style="width: 60%">
+                <h3>桃園市動保教育園區</h3>
+                <p>週末送養志工</p>
+                <p>協助維持環境清潔  |  協助犬隻運送</p>
+              </div>
+                <div class="flip-card-back"  >
+                <img src="img/back1.png" width="100%" height="50%" >
+              </div>
+            </div>
           </div>
         </div>
       
         <div class="column">
-          <div class="card">
+          <div class="flip-card">
+            <div class="flip-card-inner"> 
+              <div class="flip-card-front">
                 <img src="img/volunteer2.jpg" alt="" style="width:60%">
-            <h3>新竹市動物保護教育園區</h3>
-            <p>狗園打掃志工</p>
-            <p>協助清掃狗區  |  物資整理收納</p>
+                <h3>新竹市動物保護教育園區</h3>
+                <p>狗園打掃志工</p>
+                <p>協助清掃狗區  |  物資整理收納</p>
+              </div>
+                <div class="flip-card-back">
+                  <img src="img/back2.png" width="100%" height="50%" >
+              </div>   
+            </div>
           </div>
-        </div>
-        
+        </div>  
+            
         <div class="column">
-          <div class="card">
+          <div class="flip-card">
+            <div class="flip-card-inner"> 
+              <div class="flip-card-front">
                 <img src="img/volunteer3.jpg" alt="" style="width: 75%">
-            <h3>板橋動物之家</h3>
-            <p>一日志工</p>
-            <p>牽狗散步  ｜  互動觀察記錄 ｜  餵食紀錄  </p>
+                <h3>板橋動物之家</h3>
+                <p>一日志工</p>
+                <p>牽狗散步  ｜  互動觀察記錄 ｜  餵食紀錄  </p>
+              </div>
+                <div class="flip-card-back">
+                  <img src="img/back1.png" width="100%" height="50%" >
+              </div>
+            </div>
           </div>
         </div>
+        
         <div class="column">
-            <div class="card">
-                  <img src="img/volunteer4.jpg" alt="" style="width:95%">
-              <h3>台南市流浪動物愛護協會</h3>
-              <p>住院室志工 |  浪犬恢復室打掃 </p>
-              <p>牽狗散步  ｜  互動觀察記錄 ｜  餵食紀錄 </p>
+          <div class="flip-card">
+            <div class="flip-card-inner"> 
+              <div class="flip-card-front">
+                <img src="img/volunteer4.jpg" alt="" style="width:95%">
+                <h3>台南市流浪動物愛護協會</h3>
+                <p>住院室志工 |  浪犬恢復室打掃 </p>
+                <p>牽狗散步  ｜  互動觀察記錄 ｜  餵食紀錄 </p>
+              </div>
+                <div class="flip-card-back">
+                  <img src="img/back2.png" width="100%" height="50%" >
+              </div>
             </div>
           </div>
+        </div>
+        
           <div class="column">
-            <div class="card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
                   <img src="img/volunteer5.jpg" alt="" style="width:60%">
-              <h3>苗栗縣生態保育教育中心</h3>
-              <p>志願服務</p>
-              <p>參訪活動導覽 ｜ 拍攝網路媒體行銷</p>
+                  <h3>苗栗縣生態保育教育中心</h3>
+                  <p>志願服務</p>
+                  <p>參訪活動導覽 ｜ 拍攝網路媒體行銷</p>
+                </div>
+                  <div class="flip-card-back">
+                    <img src="img/back1.png" width="100%" height="50%" >
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="column">
-            <div class="card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
                   <img src="img/volunteer6.jpg" alt="" style="width: 80%">
-              <h3>高雄市流浪動物保育協會</h3>
-              <p>寒暑假志工服務</p>
-              <p>協助行政作業  ｜  整理捐贈物資</p>
+                  <h3>高雄市流浪動物保育協會</h3>
+                  <p>寒暑假志工服務</p>
+                  <p>協助行政作業  ｜  整理捐贈物資</p>
+                </div>
+                  <div class="flip-card-back">
+                    <img src="img/back2.png" width="100%" height="50%" >
+                </div>
+              </div>
             </div>
           </div>
         
-      </div>
+    </div>
       
 
 </body>
@@ -209,25 +265,21 @@
             modal.style.display = "none";
         }
     }
+
+             
 </script>
-
-
-
 <script>
-    $(document).ready(function() {
-    var date = new Date();
+  let popup = document.getElementById("popup");
+  
+  function openPopup(){
+    popup.classList.add("open-popup");
+  }
+  function closePopup(){
+    popup.classList.remove("open-popup");
+  }
 
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var year = date.getFullYear();
-
-    if (month < 10) month = "0" + month;
-    if (day < 10) day = "0" + day;
-
-    var today = year + "-" + month + "-" + day;       
-    $("#theDate").attr("value", today);
-});
-</script>
-
-
+  </script>
+ 
 </html>
+
+

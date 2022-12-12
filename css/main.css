@@ -128,10 +128,9 @@ nav a:hover{
 .exit:active{
     transform: translateY(4px);
 }
-
 .footer{
     width: 100%;
-    position: relative;
+    position: static;
     font-size: 12px;
     margin-top: 10%;
     padding-top: 10px;

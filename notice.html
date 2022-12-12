@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    
     <title>一汪無際No Way Home</title>
 </head>
 <header>
@@ -82,59 +85,41 @@
     </div>
 
 </header>
+<style>
+input[type="sub"]{padding:5px 15px; background:#76651b; color:rgb(255, 255, 255);border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    margin-left: 50px;
+    text-align: center;
+    border-radius: 20px; }
+   
+</style>
 <body>
     
-    <div class="up2">
+    <div class="up3">
         <form class="repo2">
+            <form action="/formprocess.php" method="post">
 
-            <div class="ti">
-            <label>通報類別：</label>
-            <label><input type="radio" name="report" value="general" required>一般通報</label>
-            <label><input type="radio" name="report" value="urgent">緊急通報</label></div>
+                    <div class="notice"><p>！領養申請流程！</p><br>
+                    <p>以下是領養狗狗的步驟：</p><br>
+                <p>1. 和狗狗進行配對</p>
+                    
+                <p>2. 填寫領養諮詢表</p>
+                    
+                    <p> 3. 參加領養狗狗有參加的志工活動（團隊成員會連絡您）</p>
+                    
+                        <p>  4. 安置專員將安排您與狗狗見面、進行面談和參觀您的家（面對面或線上）</p>
+                    
+                            <p>  5. 倘若適合，我們會安排一個星期的試養</p>
+                    
+                                <p>  6. 若試養順利，我們會請您簽署正式領養合約，然後再將狗狗的晶片轉移到您的名下<br><br></p></div>
 
-
-        <p class="ww">犬種：
-        <select class="variety" required>
-            <option>貴賓</option>
-            <option>米克斯</option>
-            <option>馬爾濟斯</option>
-            <option>雪納瑞</option>
-            <option>柴犬</option>
-            <option>柯基</option>
-            <option>吉娃娃</option>
-            <option>臘腸</option>
-            <option>博美</option>
-            <option>哈士奇</option>
-            <option>拉布拉多</option>
-            <option>蝴蝶犬</option>
-            <option>巴哥</option>
-            <option>西施犬</option>
-            <option>鬆獅犬</option>
-            <option>黃金獵犬</option>
-            <option>薩摩耶</option>
-            <option>阿拉斯加犬</option>
-            <option>約克夏</option>
-            <option>牛頭㹴</option>
-            <option>其他</option>
-            <option>不明</option>
-        </select></p>
-
-            <p class="ww">情況：
-            <input type="text" name="state" class="state" placeholder="精神、明顯外傷位置或其他特殊狀況..." required ></p>
-
-            <p class="ww">
-            <button class="loca_btn" onclick="getLocation()">出沒位置</button>
-            <p id="demo" class="loca_text"></p></p>
-
-
-            <center>
-                <input type="button" class="next" onclick="showalert()" value="提交" />
-                <div id="current_date" class="tii"></div>
-
-            </center>
-        </form></div>
-
-
+         <p><input type="sub" value="已了解，確認領養!" onclick="location.href='submitpair.html'"></p>
+                
+            </form>
+            </form>
+            </div>
+           
 
 </body>
 
@@ -172,26 +157,11 @@
     }
     </script>
 
-<!--時間-->
-<script>
-    date = new Date();
-    year = date.getFullYear();
-    month = date.getMonth() + 1;
-    day = date.getDate();
-    hours = date.getHours();
-    minutes = date.getMinutes();
 
-    document.getElementById("current_date").innerHTML = "通報時間：" + year + "/" + month + "/" + day + "    " + hours + ":" + minutes;
-</script>
+    
 
 
+    
 
 
-<script>
-function showalert(){
-    alert("已收到您的通報資料。");
-  }
-  
-</script>
 </html>
-
