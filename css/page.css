@@ -347,6 +347,16 @@
 .revisebtn3:active{
     transform: translateY(4px);
 }
+.table{
+    width: 90%;
+    margin: 5%;
+    padding: 3%;
+    font-size: 14px;
+    color: #5B4522;
+    text-align: right;
+    border-radius: 20px;
+    background-color: #D4E8CF;
+}
 @media screen and (min-width: 768px) {
     .advertise{
         width: 80%;
