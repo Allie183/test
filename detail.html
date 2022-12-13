@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/page.css">
-    <link rel="stylesheet" href="css/upload.css">
     <title>一汪無際No Way Home</title>
 </head>
 <header>
@@ -84,82 +83,43 @@
 </header>
 <body>
     
-    <button class="back"><img class="backimg" src="img/left-arrow.png" alt="" onclick="history.back()"></button>
 
-    <!--選擇檔案-->
-    <div class="up">
-        <form action="/somewhere/to/upload" enctype="multipart/form-data" accept="image/gif, image/jpeg, image/png, image/jpg, image/svg, image/heic">  
-            <p class="title">請上傳相片：</p>
-        <input type="file"  class="choose" onchange="readURL(this)" targetID="preview_progressbarTW_img" required />
-
-        <img id="preview_progressbarTW_img"  class="prepic" />
-     
-     </form>
-
-     <center>
-        <a href="report2.html">
-            <input type="button" class="next" onclick="showalert()" value="下一步" />
-    </center>
+    
+    <div class="msg">
+        <div class="advertise">
+            <p class="title3">
+                桃園市動保教育園區認養補助申請
+            </p>
+            <p class="content2">111年桃園市動物保護教育園區認養犬貓保險補助申請自1月1日起開始辦理，補助款核發金額：犬貓每隻新臺幣1,000元整。犬貓保險補助費預算有限，本補助款係屬鼓勵性質，故超過之額度則不予以補助；若低於補助費用則核實支付。本補助適用日期自 111 年 1月1 日起至 111 年 12月 3 1日或經費用罄止。<br>
+                凡111年1月1日至同年12月31日向本市動物保護教育園區認養犬貓並符合下列2項條件者可進行申請費用補助: <br>
+                 1.逾退回期限(超過30日，認養當日為起始日)且飼主自行投保之保單已經生效。 <br>
+                 2.保險保障內容須含有醫療保障(門診、住院、手術)或喪葬補助。<br>
+                 符合條件者，請填寫「桃園市動物保護教育園區認養犬貓保險補助款申請證明書」和「匯款同意書」(含身分證正反面影本、存摺封面影本)並檢附應備資料（請詳閱參考申請證明書背面之111年桃園市動物保護教育園區認養犬貓保險補助款申請須知第七點)，完成後請於退回期限隔日起60日內掛號寄出或親送至本處或桃園市動物保護教育園區。
+有關補助款申請證明書(含範例)及申請流程圖請參考附件。
+            </p>
+            
+            
+        </div>
+        <div class="advertise2">
+            <img src="img/msg2.ashx" alt="">
+        </div>
+        
     </div>
-
-    
-
-    
-
+  
 </body>
 
 
 
-<script>
-
-    l = document.getElementById('id01');
-    
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
-    }
-</script>
-
-<!--選擇檔案-->
-<script>
-
-function readURL(input){
-
-  if(input.files && input.files[0]){
-
-    var imageTagID = input.getAttribute("targetID");
-
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-
-       var img = document.getElementById(imageTagID);
-
-       img.setAttribute("src", e.target.result)
-
-    }
-
-    reader.readAsDataURL(input.files[0]);
-
-  }
-
-}
-
-
-</script>
-
-    
-
-
-<script>
-    function showalert(){
-     alert("偵測不到狗狗，請重新拍攝!!");
-     }
-
-</script>
-
-    
-
+    </script>
 
 </html>
