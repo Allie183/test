@@ -7,6 +7,7 @@
 }
 body{
     background: rgba(168, 190, 150, 0.25);
+    padding-bottom: 20%;
 }
 #menu_control{
     position: absolute;
@@ -144,18 +145,7 @@ nav a:hover{
     width: 12px;
  
 }
-.footer{
-    width: 100%;
-    position: absolute;
-    font-size: 12px;
-    margin-top: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    bottom: 0;
-    background-color: #F4F9EB;
-    color: #5B4522;
-    text-align: center;
-}
+
 
 
 
