@@ -128,9 +128,25 @@ nav a:hover{
 .exit:active{
     transform: translateY(4px);
 }
+.back{
+    margin-top: 4%;
+    margin-left: 4%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: #5B4522;
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.backimg{
+    width: 12px;
+ 
+}
 .footer{
     width: 100%;
-    position: static;
+    position: absolute;
     font-size: 12px;
     margin-top: 10%;
     padding-top: 10px;

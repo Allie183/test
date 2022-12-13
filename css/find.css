@@ -30,6 +30,7 @@ img{
     border-radius: 10px;
     scroll-snap-align: center;
     scroll-snap-stop: always;
+    
 }
 
 .straydog-card_status{
@@ -67,9 +68,7 @@ img{
     background-color: #A8BE96;
 }
 
-.condtion{
 
-}
 
 .condtion-card{
     background-color: rgb(255, 255, 255);
