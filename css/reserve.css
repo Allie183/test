@@ -8,6 +8,7 @@
 }
 body{
   background:rgba(168, 190, 150, 0.25);;
+  padding-bottom: 30%;
 }
 ::selection{
   color: #fff;
@@ -70,7 +71,7 @@ body{
   position: absolute;
   top:3em;
   left: 50%;
-  width: 100%;
+  width: 90%;
   transform: translateX(-50%);
   opacity: 0;
   display: none;
@@ -105,6 +106,7 @@ background: #91A695;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: 15%;
   margin-bottom: 3%;
+  z-index: 1;
  }
 
  .popup{
@@ -179,8 +181,9 @@ background: #91A695;
 /* Responsive columns */
 @media screen and (max-width: 768px) {
   .column {
-    width: 100%;
+    width: 90%;
     display: block;
+    margin-bottom: 2%;
    
   }
 }
@@ -196,7 +199,7 @@ background: #91A695;
 
 .flip-card-inner {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 100%;
   text-align: center;
   transition: transform 0.6s;
