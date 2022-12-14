@@ -15,7 +15,7 @@
     padding-top: 8%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 50%;
+    padding-bottom: 20%;
 }
 
 
@@ -28,6 +28,8 @@
 
 .choose{
     padding-top: 10%;
+    max-width: 60%;
+
 }
 
 .prepic{
@@ -53,7 +55,7 @@
 
 .checkbtn:hover {
     background-color: rgb(222, 234, 213);
-    border-radius: 50px
+    border-radius: 50px;
 }
 
 .next{
@@ -138,7 +140,7 @@
 
 
 .state{
-    margin-top: 28px;
+    margin-top: 40px;
     padding-top: 30px;
     padding-bottom: 10%;
     padding-right: 5%;
@@ -166,9 +168,7 @@
 
 }
 
-
-
-.loca_btn{
+.collapsible {
     width: 95%;
     height: 50px;
     background-color: rgb(254, 248, 243);
@@ -179,22 +179,39 @@
     font-size: 18px;
     border-width: 3px;
     border-color: rgb(124, 91, 77);
+  	cursor: pointer;
+  	outline: none;
 }
 
-
-.loca_text{
-    font-size: 18px;
-    padding-top: 15px;
-    padding-left: 30%;
-    padding-right: 20%;
-    text-align:left;
-}
-
-.loca_btn:hover {
-    background-color: rgb(201, 187, 175);
+.active, .collapsible:hover {
+background-color: rgb(201, 187, 175);
     border-radius: 50px;
     color: rgb(254, 248, 243);
 }
+
+.content {
+    width: 90%;
+    height: 250px;
+    background-color: rgb(250, 236, 225);
+    color:rgb(95, 73, 63);
+    border-radius: 20px;
+    margin-top:-30px;
+    margin-left: 1px;
+    font-size: 18px;
+    border-width: 3px;
+    border-color: rgb(124, 91, 77);
+    display: none;
+    overflow: hidden;
+}
+
+
+.picc{
+    padding-top: 50px;
+    padding-bottom:20px;
+    width: 90%;
+    height: 250px;
+    border-radius: 15px;
+   }
 
 .enter_repo2{
     width: 100px;
@@ -242,7 +259,10 @@
 }
 
 .ppp{
+    padding-top: 25%;
+    font-size: 18px;
     text-align: center;
+    color: #708163;
 
 }
 
@@ -271,20 +291,7 @@
     transform: translate(-50%,-200%) scale(1);
    }
    
-   .popup img{
-    width: 50%;
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  
-   }
-  
-   .popup h2{
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-    color: #849974;
-   }
+
   
    .popup button{
     width: 100%;
@@ -298,4 +305,22 @@
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+   }
+
+
+
+
+   .popup img{
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  
+   }
+
+   .pppp{
+    padding-top: 10%;
+    font-size: 18px;
+    text-align: center;
+    color: #708163;
    }

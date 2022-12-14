@@ -96,8 +96,11 @@
      </form>
 
      <center>
-        <a href="report2.html">
-            <input type="button" class="next" onclick="showalert()" value="下一步" />
+        <button type="submit" class="checkbtn" onclick="openPopup()">下一步</button>
+        <div class="popup" id="popup">
+          <P class="ppp">狗狗犬種為「貴賓」</P>
+          <a href="report2.html"><button type="button" onclick="closePopup()">確認</button></a>
+        </div>
     </center>
     </div>
 
@@ -145,13 +148,21 @@ function readURL(input){
 
 }
 
-function showalert(){
-    alert("偵測到犬種為「貴賓」。");
-  }
-  
+
 </script>
 
+<script>
+    let popup = document.getElementById("popup");
     
+    function openPopup(){
+      popup.classList.add("open-popup");
+    }
+    function closePopup(){
+      popup.classList.remove("open-popup");
+    }
+  
+    </script>
+
 
 
 </html>

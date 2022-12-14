@@ -90,29 +90,30 @@
             <center>
             <p class="ww">犬種：貴賓</p>
 
-                <select class="ca" required>
+                <select class="ca" >
                         <option class="ppp">請選擇通報類別</option>
                         <option class="ppp">一般通報</option>
                         <option class="ppp">緊急通報</option>
                         
                     </select>
-                
-                        <button class="loca_btn" onclick="getLocation()" required>出沒位置</button>
-                        <p id="demo" class="loca_text"></p>
-                        
+                    <button type="button" class="collapsible">出沒位置</button>
+                    <div class="content">
+                      <img src="img/map.png" class="picc">
+                    </div>
+
+                    
                         <input type="text" name="state" class="state" 
-                        placeholder="請填寫狗狗受傷位置或其他特殊狀況..." required ></input>
+                        placeholder="請填寫狗狗受傷位置或其他特殊狀況..." ></input>
 
 
-
-
-            <button type="submit" class="checkbtn" onclick="openPopup()">提交</button>
-            <div class="popup" id="popup">
-              <img src="img/tick.png" class="aaa">
-              <p>已收到您的通報資料</p>
-              <a href="report.html"><button type="button" onclick="closePopup()">OK</button></a>
-            </div>
-                <div id="current_date" class="tii"></div>
+                        <button type="button" class="checkbtn" onclick="openPopup()">送出</button>
+                        <div class="popup" id="popup">
+                        <img src="img/tick.png">
+                          <P class="pppp">已收到您的通報資料</P>
+                          <a href="profile.html"><button type="button" onclick="closePopup()">OK</button></a>
+                        </div>
+                        
+                        <div id="current_date" class="tii"></div>
     </center>
         </form></div>
 
@@ -133,22 +134,7 @@
     }
 </script>
 
-<!--位置-->
-<script>
-    var x = document.getElementById("demo");
-    
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
-    }
-    
-    function showPosition(position) {
-      x.innerHTML = "經度: " + position.coords.latitude + "°"+"<br>緯度: " + position.coords.longitude+"°";
-    }
-    </script>
+
 
 <!--時間-->
 <script>
@@ -164,7 +150,6 @@
 
 
 
-
 <script>
     let popup = document.getElementById("popup");
     
@@ -176,5 +161,24 @@
     }
   
     </script>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+    
+
 </html>
 

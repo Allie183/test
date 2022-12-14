@@ -83,7 +83,6 @@
 
 </header>
 <body>
-    
     <button class="back"><img class="backimg" src="img/left-arrow.png" alt="" onclick="history.back()"></button>
 
     <!--選擇檔案-->
@@ -97,8 +96,11 @@
      </form>
 
      <center>
-        <a href="report2.html">
-            <input type="button" class="next" onclick="showalert()" value="下一步" />
+        <button type="submit" class="checkbtn" onclick="openPopup()">下一步</button>
+        <div class="popup" id="popup">
+          <P class="ppp">偵測不到狗狗，請重新拍攝!!</P>
+          <a href="report.html"><button type="button" onclick="closePopup()">確認</button></a>
+        </div>
     </center>
     </div>
 
@@ -149,17 +151,17 @@ function readURL(input){
 
 </script>
 
-    
-
-
 <script>
-    function showalert(){
-     alert("偵測不到狗狗，請重新拍攝!!");
-     }
-
-</script>
-
+    let popup = document.getElementById("popup");
     
+    function openPopup(){
+      popup.classList.add("open-popup");
+    }
+    function closePopup(){
+      popup.classList.remove("open-popup");
+    }
+  
+    </script>
 
 
 </html>
