@@ -1,19 +1,15 @@
-.adcon{
-    width: 90%;
-    height:50px;
-}
 .msg{
     max-width: 450px;
     width: 90%;
     height: 100%;
     position: relative;
-    top: 30px;
+    top: 70px;
     bottom: 30px;
     right: 5px;
     background-color: rgb(252, 252, 252);
     border-radius: 20px;
-    margin-left: 5%;
-    margin-right: 3%;
+    margin-left: 6%;
+    margin-right: 5%;
     margin-bottom: 3%;
     display: flex;
     justify-content: center;
