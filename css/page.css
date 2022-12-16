@@ -7,7 +7,7 @@
     width: 90%;
     height: 100%;
     position: relative;
-    top: 30px;
+    top:70px;
     bottom: 30px;
     right: 5px;
     background-color: rgb(252, 252, 252);
@@ -41,6 +41,18 @@
     padding: 10px 25px;
     margin-bottom: 3%;
 }
+.advertises{
+ 
+    border-radius: 20px;
+    margin-top: 3%;
+    padding: 10px 25px;
+    margin-bottom: 3%;
+}
+.advertisee img{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 .title2{
     font-size: 20px;
     overflow: hidden;
@@ -51,8 +63,15 @@
     font-size: 36px;
     margin-bottom: 3%;
 }
+.titlee{
+    font-size: 20px;
+    margin-bottom: 3%;
+}
 .content2{
     font-size: 20px;
+}
+.contentt{
+    font-size: 14px;
 }
 .content{
     width: 150px;
@@ -469,5 +488,10 @@
         text-decoration: none;
         color: #5B4522;
     }
+    .advertisee img{
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
 }
