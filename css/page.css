@@ -1,15 +1,19 @@
+.adcon{
+    width: 90%;
+    height:50px;
+}
 .msg{
     max-width: 450px;
     width: 90%;
     height: 100%;
     position: relative;
-    top: 70px;
+    top: 30px;
     bottom: 30px;
     right: 5px;
     background-color: rgb(252, 252, 252);
     border-radius: 20px;
-    margin-left: 6%;
-    margin-right: 5%;
+    margin-left: 5%;
+    margin-right: 3%;
     margin-bottom: 3%;
     display: flex;
     justify-content: center;
@@ -381,6 +385,10 @@
     border-radius: 20px;
     background-color: #D4E8CF;
 }
+#map {
+    height: 400px;
+    width: 100%;
+   }
 @media screen and (min-width: 768px) {
     .advertise{
         width: 80%;
